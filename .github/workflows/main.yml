@@ -32,29 +32,29 @@ jobs:
         #This is a marketplace workflow to checkout the current branch
         #Without this, you will be working with an empty directory
       - uses: actions/checkout@v3
-         with:
+        with:
            fetch-depth: 0
-        Below is the actual check
-       - name: check pref
-         run: |
+        #Below is the actual check
+      - name: check pref
+        run: |
            if ls *.py 2>/dev/null | grep -qv '^CS3213'; then\
              echo "All .py files should begin with CS3213"
              exit 1
            fi
 
-   checkdocumentation:
+  checkdocumentation:
      name: Check Documentation
      runs-on: ubuntu-latest
      steps:
-        Checkout the current branch
+        # Checkout the current branch
        - uses: actions/checkout@v3
          with:
            fetch-depth: 0
-        Set up python environment
+        # Set up python environment
        - name: Set up Python
          uses: actions/setup-python@v4
          with:
            python-version: '3.10'
-        Run your test
+        # Run your test
        - name: Check Documentation
          run: python check_doc.py
