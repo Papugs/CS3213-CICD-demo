@@ -1,7 +1,7 @@
 # CS3213-CICD-demo
 This repo is a demonstration of using GitHub Actions for CI/CD. Designed as part of NUS CS3213.
 
-## Setup
+## Setup 
 Make a fork of this repo on GitHub into your own GitHub account. Enable GitHub Action on forked repo.
 DO NOT fork it into the course GitHub organization as we already have one fork here.
 
